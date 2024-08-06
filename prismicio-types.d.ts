@@ -180,6 +180,103 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument | SettingsDocument;
 
 /**
+ * Item in *Bento → Default → Primary → Box*
+ */
+export interface BentoSliceDefaultPrimaryBoxItem {
+  /**
+   * Title field in *Bento → Default → Primary → Box*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.default.primary.box[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Body field in *Bento → Default → Primary → Box*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.default.primary.box[].body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Image field in *Bento → Default → Primary → Box*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.default.primary.box[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Bento → Default → Primary*
+ */
+export interface BentoSliceDefaultPrimary {
+  /**
+   * Heading field in *Bento → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: italic for gold text
+   * - **API ID Path**: bento.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body field in *Bento → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Box field in *Bento → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bento.default.primary.box[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  box: prismic.GroupField<Simplify<BentoSliceDefaultPrimaryBoxItem>>;
+}
+
+/**
+ * Default variation for Bento Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BentoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BentoSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Bento*
+ */
+type BentoSliceVariation = BentoSliceDefault;
+
+/**
+ * Bento Shared Slice
+ *
+ * - **API ID**: `bento`
+ * - **Description**: Bento
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BentoSlice = prismic.SharedSlice<"bento", BentoSliceVariation>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -323,6 +420,11 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      BentoSlice,
+      BentoSliceDefaultPrimaryBoxItem,
+      BentoSliceDefaultPrimary,
+      BentoSliceVariation,
+      BentoSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

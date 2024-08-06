@@ -21,7 +21,7 @@ export default function SliceSimulatorPage({
   const slices = getSlices(searchParams.state);
 
   return (
-    <SliceSimulator className="bg-slate-950">
+    <SliceSimulator background="#070815">
       <SliceZone slices={slices} components={components} />
     </SliceSimulator>
   );

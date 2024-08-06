@@ -1,0 +1,157 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Strange"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit esse veniam voluptate exercitation consectetur in duis id commodo ad velit."
+						}
+					}
+				]
+			},
+			"box": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Experience"
+											}
+										}
+									]
+								}
+							],
+							[
+								"body",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Amet consectetur mollit culpa laborum consequat nulla reprehenderit amet duis duis laborum ea ad. Cillum id cillum incididunt deserunt labore aliqua nostrud in tempor anim eu incididunt sunt. Ut nulla quis sit sint et mollit irure est magna aliqua amet aute ut amet."
+											}
+										}
+									]
+								}
+							],
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+										"width": 3344,
+										"height": 2509
+									},
+									"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+									"width": 3344,
+									"height": 2509,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Lorem ipsum",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"body",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Amet consectetur mollit culpa laborum consequat nulla reprehenderit amet duis duis laborum ea ad. Cillum id cillum incididunt deserunt labore aliqua nostrud in tempor anim eu incididunt sunt. Ut nulla quis sit sint et mollit irure est magna aliqua amet aute ut amet.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"url": "https://images.unsplash.com/photo-1704960945993-ef988f2a17f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIyODU2MjY5fDA&ixlib=rb-4.0.3&q=85",
+									"alt": "a yellow lemon sitting on top of a reflective surface",
+									"origin": {
+										"id": "KufsPJyG6Ig",
+										"url": "https://images.unsplash.com/photo-1704960945993-ef988f2a17f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIyODU2MjY5fDA&ixlib=rb-4.0.3&q=85",
+										"width": 6000,
+										"height": 4000
+									},
+									"width": 6000,
+									"height": 4000,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

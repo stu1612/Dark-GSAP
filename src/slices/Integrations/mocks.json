@@ -1,0 +1,49 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Merely"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure ea eiusmod Lorem qui quis anim ea consequat eiusmod exercitation sit. Est cillum qui aliqua minim reprehenderit. Mollit minim veniam tempor deserunt laborum consectetur."
+						}
+					}
+				]
+			},
+			"icon": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"icon",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "figma",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

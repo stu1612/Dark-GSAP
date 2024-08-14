@@ -92,12 +92,21 @@ export default function Navbar({ settings }: NavbarProps) {
 
         {/* Desktop Nav */}
 
-        <ul className="flex gap-6">
+        <ul className="hidden gap-6 md:flex">
           {settings.data.navigation.map((item) => {
             if (item.cta_button) {
               return (
                 <li key={item.label}>
-                  <ButtonLink field={item.link}>{item.label}</ButtonLink>
+                  <ButtonLink
+                    field={item.link}
+                    aria-current={
+                      pathname.includes(asLink(item.link) as string)
+                        ? "page"
+                        : undefined
+                    }
+                  >
+                    {item.label}
+                  </ButtonLink>
                 </li>
               );
             }
@@ -106,6 +115,11 @@ export default function Navbar({ settings }: NavbarProps) {
                 <PrismicNextLink
                   field={item.link}
                   className="inline-flex min-h-11 items-center"
+                  aria-current={
+                    pathname.includes(asLink(item.link) as string)
+                      ? "page"
+                      : undefined
+                  }
                 >
                   {item.label}
                 </PrismicNextLink>

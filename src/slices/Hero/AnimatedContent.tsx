@@ -1,4 +1,6 @@
 "use client";
+// react
+import { useRef } from "react";
 
 // components
 import ButtonLink from "@/components/ButtonLink";
@@ -8,7 +10,6 @@ import StarGrid from "@/components/StarGrid";
 import { Content, isFilled } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
-import { useRef } from "react";
 
 // gsap
 import gsap from "gsap";
@@ -24,7 +25,7 @@ export default function AnimatedContent({
 }) {
   // scoped gsap refs
   const container = useRef(null);
-
+  // screen reader reduced motion hook
   const prefersReducedMotion = usePrefersReducedMotion();
 
   gsap.registerPlugin(useGSAP);
@@ -32,10 +33,12 @@ export default function AnimatedContent({
   useGSAP(
     () => {
       if (prefersReducedMotion) {
+        // if prefersReducedMotion is TRUE then set classes to opacity 1 without animating
         gsap.set(
           ".hero__heading, .hero__body, .hero__button, .hero__image, .hero__glow",
           { opacity: 1 },
         );
+        return;
       }
       const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 
